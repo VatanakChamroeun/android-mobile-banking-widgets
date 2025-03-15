@@ -36,7 +36,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/widget_qr_info" />
+                android:resource="@xml/widget_exchange_rate_info" />
         </receiver>
 
         <receiver
