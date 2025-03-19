@@ -6,4 +6,4 @@
     android:previewLayout="@layout/widget_account_info"
     android:resizeMode="none"
     android:updatePeriodMillis="1800000"
-    android:widgetCategory="home_screen" />
+    android:widgetCategory="home_screen|keyguard" />
