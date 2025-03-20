@@ -1,15 +1,20 @@
-package com.example.android_mobile_banking_widgets
+package com.example.android_mobile_banking_widgets.fragments
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.android_mobile_banking_widgets.databinding.FragmentQrBinding
+import com.example.android_mobile_banking_widgets.R
+import com.example.android_mobile_banking_widgets.databinding.FragmentFirstBinding
 
-class QRFragment : Fragment() {
-    private var _binding: FragmentQrBinding? = null
+/**
+ * A simple [Fragment] subclass as the default destination in the navigation.
+ */
+class FirstFragment : Fragment() {
+
+    private var _binding: FragmentFirstBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -18,9 +23,9 @@ class QRFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
 
-        _binding = FragmentQrBinding.inflate(inflater, container, false)
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -28,7 +33,7 @@ class QRFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonPrevious.setOnClickListener {
+        binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }

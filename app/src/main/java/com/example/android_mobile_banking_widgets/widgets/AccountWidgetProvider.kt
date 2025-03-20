@@ -7,7 +7,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
-import com.example.android_mobile_banking_widgets.MainActivity
+import com.example.android_mobile_banking_widgets.activities.MainActivity
 import com.example.android_mobile_banking_widgets.R
 import com.example.android_mobile_banking_widgets.R.layout.widget_account_info
 
@@ -93,7 +93,7 @@ class AccountWidgetProvider : AppWidgetProvider() {
         private fun setUpQRClickListener(context: Context, views: RemoteViews) {
             val qrIntent = Intent(context, MainActivity::class.java).apply {
                 action = "com.example.android_mobile_banking_widgets.NAVIGATE_QR"
-                putExtra("destination", "QRFragment")
+                putExtra("destination", "QRActivity")
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
             }
             val qrPendingIntent = PendingIntent.getActivity(
@@ -108,7 +108,7 @@ class AccountWidgetProvider : AppWidgetProvider() {
         private fun setUpScanQRClickListener(context: Context, views: RemoteViews) {
             val scanQrIntent = Intent(context, MainActivity::class.java).apply {
                 action = "com.example.android_mobile_banking_widgets.NAVIGATE_SCAN_QR"
-                putExtra("destination", "ScanQRFragment")
+                putExtra("destination", "ScanQRActivity")
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
             }
             val scanQrPendingIntent = PendingIntent.getActivity(

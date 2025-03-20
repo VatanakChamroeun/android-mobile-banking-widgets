@@ -1,18 +1,21 @@
-package com.example.android_mobile_banking_widgets
+package com.example.android_mobile_banking_widgets.activities
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import androidx.fragment.app.Fragment
+import com.example.android_mobile_banking_widgets.R
 import com.example.android_mobile_banking_widgets.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         val destination = intent.getStringExtra("destination")
         if (destination != null) {
-            navigateToFragment(destination)
+            navigateToActivity(destination)
         }
     }
 
@@ -62,16 +65,18 @@ class MainActivity : AppCompatActivity() {
                 || super.onSupportNavigateUp()
     }
 
-    private fun navigateToFragment(destination: String) {
-        val fragment: Fragment = when (destination) {
-            "QRFragment" -> QRFragment()
-            "ScanQRFragment" -> ScanQRFragment()
+    private fun navigateToActivity(destination: String) {
+        val intent = when (destination) {
+            "QRActivity" -> Intent(this, QRActivity::class.java)
+            "ScanQRActivity" -> Intent(this, QRActivity::class.java)
             else -> return
         }
 
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
+        val options = ActivityOptions.makeCustomAnimation(
+            this, R.anim.slide_in_right, R.anim.slide_out_left
+        )
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(intent, options.toBundle())
+        }, 200)
     }
 }
