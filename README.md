@@ -13,7 +13,7 @@ This project is built with the following versions:
 - **Gradle Version**: `7.3.3`
 
 ## 📸 Screenshots
-| Widget Type | Screenshot |
+| Widget | Screenshot |
 |------------|---------|
 | Account Info | ![Account Info](screenshots/account_info.png) |
 | Exchange | ![Exchange](screenshots/exchange.png) |
@@ -70,23 +70,6 @@ To customize the widget, modify `res/xml/widget_account_info_info.xml` following
     android:resizeMode="none"
     android:widgetCategory="home_screen|keyguard" />
 ```
-
-<!--## 🛠️ Dependencies-->
-<!--Ensure you have these dependencies in your `build.gradle`:-->
-<!--```gradle-->
-<!--dependencies {-->
-<!--    implementation 'androidx.core:core-ktx:1.9.0'-->
-<!--    implementation 'androidx.appcompat:appcompat:1.4.1'-->
-<!--}-->
-<!--```-->
-
-## 🤝 Contributing
-1. Fork the repo and create a new branch (`feature-branch`)
-2. Make changes and commit (`git commit -m "Added new widget feature"`)
-3. Push and create a Pull Request
-
-<!--## 📜 License-->
-<!--This project is licensed under the **MIT License**.-->
 
 ---
 
