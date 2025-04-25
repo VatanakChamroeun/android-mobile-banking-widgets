@@ -1,16 +1,7 @@
 # Android Mobile Banking Widgets
 
 ## 📱 Introduction
-Android Widget provides quick access to app data right from the home screen. It enhances user experience by allowing interactions without opening the app. This small project showcases various UIs of widgets built using **Kotlin** and **XML-based layouts**.
-
-## 🛠️ Prerequisites
-
-This project is built with the following versions:
-
-- **Kotlin Version**: `1.5.31`
-- **Java Version**: `8`
-- **Android SDK Version**: `32`
-- **Gradle Version**: `7.3.3`
+Android widgets provide quick access to app data on the home screen, allowing users to interact without opening the app. This project showcases various UIs of widgets built using **Kotlin** and **XML-based layouts**.
 
 ## 📸 Screenshots
 | Widget | Screenshot |
@@ -23,9 +14,9 @@ This project is built with the following versions:
 <!--[![Watch the video](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)-->
 
 ## ✨ Features
-- 💳 **Account Info** –Display QR, balance, and refresh button.
-- 🔄 **Exchange** – Display buy and sell rate.
-- 📱 **QR** - Display account's QR.
+- 💳 **Account Info** – QR, balance, and refresh button.
+- 🔄 **Exchange** – Buy and sell rate.
+- 📱 **QR** - Account's QR.
 
 ## 📂 Project Structure
 ```
